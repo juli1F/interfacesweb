@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ariana Grande - Official Website</title>
+
+  <style>
+    /* ======== RESET ======== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* ======== BODY ======== */
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-image: 
+        linear-gradient(rgba(248, 230, 241, 0.75), rgba(212, 180, 229, 0.85)),
+        url('https://i.pinimg.com/1200x/2e/4f/79/2e4f793091e7626b169aa46d64bc7fdb.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: #2a1e27;
+      min-height: 100vh;
+    }
+
+    /* ======== HERO SECTION ======== */
+    .hero {
+      position: relative;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-image: url('https://i.pinimg.com/1200x/2e/4f/79/2e4f793091e7626b169aa46d64bc7fdb.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 0 1rem;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+    }
+
+    .hero-title {
+      font-size: 5rem;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: none;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: white;
+      color: black;
+    }
+
+    .btn-primary:hover {
+      background: rgba(255,255,255,0.9);
+      transform: translateY(-2px);
+    }
+
+    /* ======== ÁLBUNS ======== */
+    .albums-section {
+      padding: 5rem 1rem;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #111827;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .albums-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .album-card {
+      border-radius: 0;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .album-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    .album-image img {
+      width: 100%;
+      height: 18rem;
+      object-fit: cover;
+      transition: transform 0.7s;
+      display: block;
+    }
+
+    .album-card:hover img {
+      transform: scale(1.05);
+    }
+
+    /* ======== CORES DOS ÁLBUNS ======== */
+    .your-truly { background-color: #f9c5d1; }
+    .my-everything { background-color: #bdbdbd; }
+    .dangerous-woman { background-color: #c0c0c0; }
+    .sweetener { background-color: #fff59d; }
+    .thank-u-next { background-color: #ff4da6; }
+    .positions { background-color: #a5d6a7; }
+    .eternal-sunshine { background-color: #ef5350; }
+    .deluxe { background-color: #64b5f6; }
+
+    .album-info {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .album-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .album-description {
+      font-size: 0.9rem;
+      color: #222;
+      margin-bottom: 1rem;
+    }
+
+    .btn-play {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background: #1DB954;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-play:hover {
+      background: #1ed760;
+      transform: scale(1.05);
+    }
+
+    /* ======== SEÇÃO HOBBY ======== */
+    .hobby-section {
+      padding: 4rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hobby-box {
+      max-width: 800px;
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #402b3a;
+      background: linear-gradient(145deg, #fce6f1, #f398ae);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    /* ======== FOOTER ======== */
+    footer {
+      background: #111827;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Ariana Grande</h1>
+      <p class="hero-subtitle">Cantora • Compositora • Atriz</p>
+      <div class="hero-buttons">
+        <a href="https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR" target="_blank" class="btn btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          Ouvir Agora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALBUNS -->
+  <section class="albums-section">
+    <div class="container">
+      <h2 class="section-title">Álbuns</h2>
+      <div class="albums-grid">
+
+        <div class="album-card your-truly">
+          <div class="album-image">
+            <img src="https://i.pinimg.com/1200x/91/b9/ac/91b9acc6a25a4dcd22f6f79a2e93c620.jpg" alt="Yours Truly">
+          </div>
+          <div class="album-info">
+            <h3 class="album-title">Yours Truly</h3>
+            <p class="album-description">Estreia suave e romântica.</p>
+            <a href="https://open.spotify.com/search/YOUR%20TRULY" target="_blank" class="btn-play">Reproduzir</a>
+          </div>
+        </div>
+
+        <div class="album-card my-everything">
+          <div class="album-image">
+            <img src="https://i.pinimg.com/1200x/06/49/92/064992320a0f4b708c53444a48cd9d32.jpg" alt="My Everything">
+          </div>
+          <div class="album-info">
+            <h3 class="album-title">My Everything</h3>
+            <p class="album-description">Canções sobre amor e superação.</p>
+            <a href="https://open.spotify.com/intl-pt/album/6EVYTRG1drKdO8OnIQBeEj" target="_blank" class="btn-play">Reproduzir</a>
+          </div>
+        </div>
+
+        <div class="album-card dangerous-woman">
+          <div class="album-image">
+            <img src="https://i.pinimg.com/736x/f4/c9/05/f4c905282a663a9324970ab0d61e069f.jpg" alt="Dangerous Woman">
+          </div>
+          <div class="album-info">
+            <h3 class="album-title">Dangerous Woman</h3>
+            <p class="album-description">O poder feminino em destaque.</p>
+            <a href="https://open.spotify.com/album/3OZgEywV4krCZ814pTJWr7" target="_blank" class="btn-play">Reproduzir</a>
+          </div>
+        </div>
+
+        <div class="album-card sweetener">
+          <div class="album-image">
+            <img src="https://i.pinimg.com/736x/23/4b/ab/234bab483206769197541d89313b49e8.jpg" alt="Sweetener">
+          </div>
+          <div class="album-info">
+            <h3 class="album-title">Sweetener</h3>
+            <p class="album-description">Um álbum doce e esperançoso.</p>
+            <a href="https://open.spotify.com/album/3tx8gQqWbGwqIGZHqDNrGe" target="_blank" class="btn-play">Reproduzir</a>
+          </div>
+        </div>
+
+        <div class="album-card thank-u-next">
+          <div class="album-image">
+            <img src="https://i.pinimg.com/736x/52/00/55/520055ef71abcdbc96d9adc3ee68d451.jpg" alt="Thank U, Next">
+          </div>
+          <div class="album-info">
+            <h3 class="album-title">Thank U, Next</h3>
+            <p class="album-description">Amor-próprio e amadurecimento.</p>
+            <a href="https://open.spotify.com/album/2fYhqwDWXjbpjaIJPEfKFw" target="_blank" class="btn-play">Reproduzir</a>
+          </div>
+        </div>
+
+        <div class="album-card positions">
+          <div class="album-image">
+            <img src="https://i.pinimg.com/736x/bd/0f/e5/bd0fe5996aff441f143fe23a295ea886.jpg" alt="Positions">
+          </div>
+          <div class="album-info">
+            <h3 class="album-title">Positions</h3>
+            <p class="album-description">Explorando novas fases do amor.</p>
+            <a href="https://open.spotify.com/album/3euz4vS7ezKGnNSwgyvKcd" target="_blank" class="btn-play">Reproduzir</a>
+          </div>
+        </div>
+
+        <div class="album-card eternal-sunshine">
+          <div class="album-image">
+            <img src="https://i.pinimg.com/736x/f5/8d/e5/f58de58bc5e660cc1ee1826351b6b995.jpg" alt="Eternal Sunshine">
+          </div>
+          <div class="album-info">
+            <h3 class="album-title">Eternal Sunshine</h3>
+            <p class="album-description">Reflexões e esperança.</p>
+            <a href="https://open.spotify.com/search/eternal%20sunshine" target="_blank" class="btn-play">Reproduzir</a>
+          </div>
+        </div>
+
+        <div class="album-card deluxe">
+          <div class="album-image">
+            <img src="https://i.pinimg.com/736x/35/ff/f1/35fff18621f4b22e10fe57c84a6f147e.jpg" alt="Eternal Sunshine Deluxe">
+          </div>
+          <div class="album-info">
+            <h3 class="album-title">Eternal Sunshine (Deluxe)</h3>
+            <p class="album-description">Versão expandida do álbum.</p>
+            <a href="https://open.spotify.com/album/6cbwstHlsAIIWurIIXXBPd" target="_blank" class="btn-play">Reproduzir</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Hobby -->
+  <section class="hobby-section">
+    <div class="hobby-box">
+      <p>
+        Aqui vou escrever o motivo de por que a Ariana Grande é meu hobby favorito 💖  
+        (texto exemplo — você pode trocar depois!)
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Feito com 💖 por Juju</p>
+  </footer>
+
+</body>
+</html>
